@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Chronicles of the Multiverse</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Galaxy background layers -->
+  <div class="galaxy">
+    <div class="stars"></div>
+    <div class="twinkle"></div>
+    <div class="nebula"></div>
+  </div>
+
+  <main class="card">
+    <h1>Chronicles of the Multiverse</h1>
+    <div id="banner" class="hidden"></div>
+    <div id="game" aria-live="polite"></div>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
