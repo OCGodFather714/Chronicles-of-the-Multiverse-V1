@@ -1,0 +1,201 @@
+{
+  "meta": { "id": "chapter1", "title": "The Heist Begins" },
+  "startNode": "bank_intro",
+  "nodes": {
+    "bank_intro": {
+      "type": "narration",
+      "speaker": "Narrator",
+      "text": "Neon rain soaks New Horizon. Outside First National Bank, your crew waits in the shadows.",
+      "choices": [
+        { "id": "A", "label": "Move in confidently", "leadsTo": "vault_path" },
+        { "id": "B", "label": "Proceed with caution", "leadsTo": "roof_path" },
+        { "id": "C", "label": "Go in hard and fast", "leadsTo": "alarm_path" }
+      ]
+    },
+    "vault_path": {
+      "type": "scene",
+      "speaker": "Vincent",
+      "text": "No mistakes. Rachel on the vault, Elaria on cams. We’re in and out.",
+      "choices": [
+        { "id": "A", "label": "Rachel cracks the vault", "leadsTo": "vault_open" },
+        { "id": "B", "label": "Elaria kills cameras first", "leadsTo": "cam_room" }
+      ]
+    },
+    "roof_path": {
+      "type": "scene",
+      "speaker": "Elaria",
+      "text": "Roof access secured. Vents hum—guards rotate every ninety seconds.",
+      "choices": [
+        { "id": "A", "label": "Sneak through ventilation", "leadsTo": "vent_crawl" },
+        { "id": "B", "label": "Drop through skylight", "leadsTo": "skylight" }
+      ]
+    },
+    "alarm_path": {
+      "type": "scene",
+      "speaker": "Narrator",
+      "text": "Kick the door. Sirens scream. Security drones wake.",
+      "choices": [
+        { "id": "A", "label": "Fight the drones", "leadsTo": "drone_fight" },
+        { "id": "B", "label": "Fallback to alley", "leadsTo": "alley_escape" }
+      ]
+    },
+    "cam_room": {
+      "type": "scene",
+      "speaker": "Elaria",
+      "text": "Camera hub found. One guard inside, half-asleep.",
+      "choices": [
+        { "id": "A", "label": "Knock him out quietly", "leadsTo": "cams_down" },
+        { "id": "B", "label": "Bluff as maintenance", "leadsTo": "guardroom" }
+      ]
+    },
+    "vault_open": {
+      "type": "scene",
+      "speaker": "Rachel",
+      "text": "Tumblers sing. The vault yawns open—rows of safety boxes, and a sealed case marked SIGMA.",
+      "choices": [
+        { "id": "A", "label": "Grab the SIGMA case", "leadsTo": "artifact_taken" },
+        { "id": "B", "label": "Plant a decoy and leave", "leadsTo": "decoy" }
+      ]
+    },
+    "vent_crawl": {
+      "type": "scene",
+      "speaker": "Narrator",
+      "text": "Tight vents. Voices below. You reach a grate above the vault corridor.",
+      "choices": [
+        { "id": "A", "label": "Drop into corridor", "leadsTo": "hallway" },
+        { "id": "B", "label": "Scout further", "leadsTo": "cam_room" }
+      ]
+    },
+    "skylight": {
+      "type": "scene",
+      "speaker": "Narrator",
+      "text": "Glass gives with a whisper. You land in the lobby. Two guards at the far desk.",
+      "choices": [
+        { "id": "A", "label": "Distract, then slip past", "leadsTo": "hallway" },
+        { "id": "B", "label": "Take them down", "leadsTo": "alarm_path" }
+      ]
+    },
+    "drone_fight": {
+      "type": "scene",
+      "speaker": "Milo",
+      "text": "Drones swarm. Sparks and smoke. You clear them—but dispatch is alerted.",
+      "choices": [
+        { "id": "A", "label": "Rush the vault anyway", "leadsTo": "vault_open" },
+        { "id": "B", "label": "Cut losses, head to sewers", "leadsTo": "escape_sewer" }
+      ]
+    },
+    "alley_escape": {
+      "type": "scene",
+      "speaker": "Darius",
+      "text": "Engine idles in the alley. Police chatter spikes on the radio.",
+      "choices": [
+        { "id": "A", "label": "Circle to roof access", "leadsTo": "roof_path" },
+        { "id": "B", "label": "Bail through sewers", "leadsTo": "escape_sewer" }
+      ]
+    },
+    "cams_down": {
+      "type": "scene",
+      "speaker": "Elaria",
+      "text": "Cameras offline. Windows of darkness open across the bank.",
+      "choices": [
+        { "id": "A", "label": "Signal Rachel to crack vault", "leadsTo": "vault_open" },
+        { "id": "B", "label": "Spoof alarms to divert guards", "leadsTo": "hallway" }
+      ]
+    },
+    "guardroom": {
+      "type": "scene",
+      "speaker": "Guard",
+      "text": "‘Badge?’ he asks. His eyes narrow.",
+      "choices": [
+        { "id": "A", "label": "Flash a fake and talk fast", "leadsTo": "cams_down" },
+        { "id": "B", "label": "Panic and run", "leadsTo": "alarm_path" }
+      ]
+    },
+    "hallway": {
+      "type": "scene",
+      "speaker": "Narrator",
+      "text": "Quiet corridor to the vault. Motion sensors blink.",
+      "choices": [
+        { "id": "A", "label": "Time the sensors", "leadsTo": "vault_open" },
+        { "id": "B", "label": "Disable panel", "leadsTo": "cams_down" }
+      ]
+    },
+    "artifact_taken": {
+      "type": "scene",
+      "speaker": "Rachel",
+      "text": "The SIGMA case is warm to the touch. Inside: a palm-sized prism pulsing with violet light.",
+      "choices": [
+        { "id": "A", "label": "Head to loading bay exit", "leadsTo": "dock_exit" },
+        { "id": "B", "label": "Use maintenance tunnels", "leadsTo": "escape_sewer" }
+      ]
+    },
+    "decoy": {
+      "type": "scene",
+      "speaker": "Vincent",
+      "text": "Decoy planted. Let them chase a ghost. Time to vanish.",
+      "choices": [
+        { "id": "A", "label": "Roof extraction", "leadsTo": "roof_path" },
+        { "id": "B", "label": "Sewer extraction", "leadsTo": "escape_sewer" }
+      ]
+    },
+    "dock_exit": {
+      "type": "scene",
+      "speaker": "Narrator",
+      "text": "Loading bay. Rain pours through the half-open door. A patrol turns the corner.",
+      "choices": [
+        { "id": "A", "label": "Slip past in the dark", "leadsTo": "alley_escape" },
+        { "id": "B", "label": "Drop into the drain grate", "leadsTo": "escape_sewer" }
+      ]
+    },
+    "escape_sewer": {
+      "type": "scene",
+      "speaker": "Narrator",
+      "text": "You descend into the city’s veins. Water roars. Something hums ahead—an impossible light.",
+      "choices": [
+        { "id": "A", "label": "Investigate the light", "leadsTo": "portal_discovery" },
+        { "id": "B", "label": "Ignore it and keep running", "leadsTo": "blocked_tunnel" }
+      ]
+    },
+    "blocked_tunnel": {
+      "type": "scene",
+      "speaker": "Milo",
+      "text": "Cave-in blocks the path. The hum behind you intensifies.",
+      "choices": [
+        { "id": "A", "label": "Turn back toward the hum", "leadsTo": "portal_discovery" }
+      ]
+    },
+    "portal_discovery": {
+      "type": "narration",
+      "speaker": "Narrator",
+      "text": "A violet whirlpool of air and light spins above the water—silent, weightless, wrong. It pulls at the prism.",
+      "choices": [
+        { "id": "A", "label": "Step through with the prism", "leadsTo": "portal_enter" },
+        { "id": "B", "label": "Throw the prism in and run", "leadsTo": "portal_backlash" }
+      ]
+    },
+    "portal_backlash": {
+      "type": "scene",
+      "speaker": "Narrator",
+      "text": "The prism vanishes. A shockwave slams the tunnel; walls crack; water surges.",
+      "choices": [
+        { "id": "A", "label": "Dive through before it collapses", "leadsTo": "portal_enter" },
+        { "id": "B", "label": "Try to climb out", "leadsTo": "fail_escape" }
+      ]
+    },
+    "fail_escape": {
+      "type": "narration",
+      "speaker": "Narrator",
+      "text": "The tunnel gives way. In the chaos you’re swept toward the light.",
+      "choices": [
+        { "id": "A", "label": "Reach for the portal", "leadsTo": "portal_enter" }
+      ]
+    },
+    "portal_enter": {
+      "type": "narration",
+      "speaker": "Narrator",
+      "text": "Cold. Weightless. A bell rings somewhere beyond sight. New air fills your lungs.",
+      "end": true,
+      "nextChapter": "chapter2"
+    }
+  }
+}
